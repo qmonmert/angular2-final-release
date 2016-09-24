@@ -1,7 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-
 import { ContactService } from './services/contact.service';
-
+import { Contact } from './contact/contact';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
@@ -10,7 +9,7 @@ import { Observable } from 'rxjs/Observable';
 })
 export class AppComponent implements OnInit {
 
-  contacts: Observable<any>;
+  contacts: Observable<Contact>;
 
   constructor(private contactService: ContactService) {}
 
