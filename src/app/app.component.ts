@@ -2,18 +2,20 @@ import { Component, OnInit } from '@angular/core';
 
 import { ContactService } from './services/contact.service';
 
+import { Observable } from 'rxjs/Observable';
+
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html'
 })
 export class AppComponent implements OnInit {
 
-  contacts = [];
+  contacts: Observable<any>;
 
   constructor(private contactService: ContactService) {}
 
   ngOnInit() {
-    this.contacts = this.contactService.getContacts();
+    this.contactService.getHttpContacts().subscribe(data => this.contacts = data);
   }
 
 }
