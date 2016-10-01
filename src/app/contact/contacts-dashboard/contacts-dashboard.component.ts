@@ -1,10 +1,10 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactService } from './../services/contact.service';
-import { Contact } from './../contact/contact';
+import { ContactService } from './../contact-services/contact.service';
+import { Contact } from './../contact';
 import { Observable } from 'rxjs/Observable';
 
 @Component({
-  selector: 'app-contacts-dashboard',
+  selector: 'contacts-dashboard',
   templateUrl: './contacts-dashboard.component.html'
 })
 export class ContactsDashboardComponent implements OnInit {

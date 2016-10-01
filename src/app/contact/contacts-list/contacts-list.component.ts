@@ -1,11 +1,12 @@
 import { Component, Input } from '@angular/core';
 
 @Component({
-  selector: 'app-contacts-list',
+  selector: 'contacts-list',
   templateUrl: './contacts-list.component.html'
 })
 export class ContactsListComponent {
 
-  @Input() contacts;
+  @Input() 
+  contacts;
 
 }
